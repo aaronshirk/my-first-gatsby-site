@@ -3,7 +3,9 @@ import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 
-const BlogPost = ({ data, children }) => {
+const BlogPost = (props) => {
+  console.log(props);
+  const { data, children } = props;
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>{data.mdx.frontmatter.date}</p>
